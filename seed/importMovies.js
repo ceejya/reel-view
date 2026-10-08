@@ -14,6 +14,7 @@ if (!process.env.TMDB_ACCESS_TOKEN) {
   throw new Error("TMDB_ACCESS_TOKEN is missing from your .env file");
 }
 
+
 // Connect to Firebase
 initializeApp({
   credential: cert(serviceAccount),
@@ -29,6 +30,10 @@ const headers = {
 };
 
 
+
+
+
+
 // ------------------------------------
 // Get TMDB movie genres
 // ------------------------------------
@@ -39,6 +44,11 @@ async function getGenres() {
       headers,
     }
   );
+
+
+
+
+
 
   if (!response.ok) {
     throw new Error(
